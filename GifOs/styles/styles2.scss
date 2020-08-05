@@ -1,0 +1,108 @@
+@import "./style.scss";
+
+$colorPrimarioSailorDay: #f7c9f3;
+$colorSecundarioSailorDay: #4180f6;
+$colorPrimarioSailorNight: #ee3efe;
+$colorSecundarioSailorNight: #2e32fb;
+$colorDeFuente: #ffffff;
+
+$fuente: "Chakra Petch", sans-serif;
+$backgroundColorDay: #fff4fd;
+$backgroundColorDayNight: #110038;
+
+body {
+  margin-left: 100px;
+  background-color: $backgroundColorDayNight;
+  font-family: $fuente;
+}
+
+.degrade {
+  background-image: linear-gradient(
+    270deg,
+    $colorPrimarioSailorNight 0%,
+    $colorSecundarioSailorDay 100%
+  );
+}
+
+.botonBarra {
+  background-color: $colorPrimarioSailorNight;  
+  color: $colorDeFuente;
+  font-size: 16px;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+}
+
+.botonExpandible {
+  background-color: $colorPrimarioSailorNight;
+  color: $colorDeFuente;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  border-left: 1px solid navy;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+}
+.dropdown-content {
+  background-color: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.elementoDropDown{
+  width: 150px;
+  height: 36px;
+  padding-top: 7px;
+  padding-left: 16px;
+  background: #F0F0F0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.sugerenciaEncontrada {
+  background-color: #cccccc;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+}
+
+.sugerenciasDeBusqueda {
+  background-color: #b4b4b4;
+  box-shadow: inset -2px -2px 0 0 #8f8f8f, inset 2px 2px 0 0 #ffffff;
+}
+
+.buscador {
+  background-color: #b4b4b4;
+  height: 6.19rem;
+  box-shadow: inset -2px -2px 0 0 #8f8f8f, inset 2px 2px 0 0 #ffffff;
+}
+.estiloBotonBuscar:hover {
+  background: #ee3efe;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+}
+.containerCardSugerencia {
+  width: 280px;
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+.containerCardTendencia {
+  width: 294px;
+  height: 304px;
+  background: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+
+
+.sugerenciaVerMas {
+  background-color: #4180f6;
+  border: 1px solid #4c2f99;
+  box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+  color: white;
+  width: 81px;
+  height: 34px;
+}
+
+//uploadVideoGif.html
+.botonCancelar {
+  background-color: #808080;
+}
+.backgroundContainer {
+  background-color: $backgroundColorDayNight;
+}

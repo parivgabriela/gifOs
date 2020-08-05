@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://kit.fontawesome.com/6fb1aa5747.js"></script>
+    <script src="./JS/gif.js"></script>
+    <script src="./JS/RecordRTC.js"></script>
+    <title>Crear Gif</title>
+  </head>
+  <body onload="onLoadOver()">
+    <header class="top degrade">
+      <h4 class="tituloBienvenida">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </h4>
+    </header>
+    <div class="rows">
+      <a href="./index.html">
+        <img src="./assets/arrow.svg" alt="volver atras" />
+      </a>
+      <img class="logo" src="./assets/gifOF_logo.png" alt="logo  de Gif os" />
+    </div>
+    <div id="containerCrearGif" class="containerGenerarVideo backgroundContainer dimensionPrimerGeneradorVideo">
+      <div class="cabezal degrade">
+        <h3 id="tituloHeadContainer" class="tituloCrearGif">Crear Guifos</h3>
+        <img id="cerrarGrabadorGif" src="./assets/close.svg" alt="cerrar" class="elementNone">
+      </div>
+      <video id="mostrarGif" class="playGifSmall" src="https://giphy.com/gifs/11ASZtb7vdJagM/html5"></video>
+      <img id="imgMostrarGif" class="playGifSmall" src="https://giphy.com/gifs/11ASZtb7vdJagM/html5" alt="" />
+
+      <div id="containerDivCrearGif" class="containerCrearGifPrimer">
+        <img
+          src="./assets/window.png"
+          class="logoWindow"
+          alt="icono de ventana"
+        />
+        <div class="pasosParaCrear">
+          <h4 class="palabraNegrita interlinea fontSizeMedium">
+            Aquí podrás crear tus propios guifos
+          </h4>
+          <p class="interlinea">
+            Crear tu <span class="textoNegro">guifo</span> es muy fácil, graba
+            cualquier imagen con tu cámara y obtén guifos personalizados. Los
+            pasos para crear tu guifo son:
+          </p>
+          <p class="interlinea">
+            <span class="palabraNegrita">1)</span> Dar permisos de acceso a la
+            cámara (sólo por el tiempo de uso)
+          </p>
+
+          <p class="interlinea">
+            <span class="palabraNegrita">2)</span> Capturar tu momento guifo
+          </p>
+          <p class="interlinea">
+            <span class="palabraNegrita">3)</span> Revisar el momento
+          </p>
+          <p class="interlinea">
+            <span class="palabraNegrita">4)</span> Listo para subir y compartir!
+          </p>
+          <p class="interlinea">
+            ¿Quieres comenzar a crear tu
+            <span class="textoNegro">guifo</span> ahora?
+          </p>
+        </div>
+      </div>
+      <div id="botonesComenzaryCancelar" class="containerBotones">
+        <button id="botonFuncionCancelar" class="botonBarra botonCapturar botonCancelar rightButonMargin" >
+          Cancelar
+        </button>
+        <button id="botonFuncionComenzar" class="botonBarra botonCapturar rightButonMargin" onclick="modeCamera()">
+          Comenzar
+        </button>
+      </div>
+      <div id="botonesCapturarCamara" class="elementNone containerBotonCapturar "  >
+        <div class="containerCamara backgrundBotonCapturar">
+          <img src="./assets/camera.svg" alt="camara" />
+        </div>
+        <button id="botonCapturarGif" class="botonCapturar backgrundBotonCapturar" >
+          Capturar
+        </button>
+      </div>
+      <div id="containerContador" class="elementNone">
+        <p id="contador" class="elementNone"></p>
+        <p id="div_4" class="marginContador">00:</p>
+        <p id="div_3">00:</p>
+        <p id="div_1">00:</p>
+        <p id="div_2">00</p>
+      </div>
+      <div id="botonesDetener" class=" elementNone containerBotonCapturar">
+        <div class="containerCamara backgrundBotonCapturar">
+          <img src="./assets/recording.svg" alt="recording" />
+        </div>
+        <button id="stopVideoButton" class="botonCapturar backgrundBotonCapturar" >
+          Listo
+        </button>
+      </div>
+      <div id="botonesSubiryCancelar" class="elementNone containerBotones">
+        <button id="repetirCapturaGif" class="botonBarra botonCapturar botonCancelar rightButonMargin">
+          Repetir Captura
+        </button>
+        <button class="botonBarra botonCapturar rightButonMargin" onclick="setUploadGif()">
+          Subir
+        </button>
+      </div>
+      <div id="containerProcessGif" class="dimensionesProcessGif elementNone">
+        <img class="margin-botton-8" src="./assets/globe_img.png" alt="" />
+        <h4 class="palabraNegrita tituloEnProceso ">
+          Estamos subiendo tu guifo…
+        </h4>
+        <div class="containerBarraProgress rows margin-botton-8">
+            <div id="progressBar1" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar2" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar3" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar4" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar5" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar6" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar7" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar8" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar9" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar10" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar11" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar12" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar13" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar14" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar15" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar16" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar17" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar18" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar19" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar20" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar21" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar22" class="load fondoBarraEnCurso espaciadoBarra"></div>
+            <div id="progressBar23" class="load fondoBarraEnCurso"></div>
+        </div>
+        <div class="containerTextoDeCarga rows">
+          <p class="lightFontSmall">
+            Tiempo restante: <span class="tachado">38 años</span> algunos
+            minutos
+          </p>
+        </div>
+      </div>
+      <div id="mostrarMasGif" class="containerMostrarGifCreado elementNone">
+        <img id="imagenGifCreado" class="marginLeftIMG marginTopImg borderMedium dimesionesGifCreado" src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" alt="un imagen ">
+        <div class="contenedorTextoYbotones marginLeftIMG colums">
+          <h3 class="palabraNegrita tituloEnProceso marginTitle">Guifo creado con éxito</h3>
+          <button  class="botonBarra botonCopiarEnlaceGif marginBotton botonCancelar">
+            Copiar Enlace Guifo
+          </button>
+          <button  class="botonBarra botonCopiarEnlaceGif  botonCancelar">
+            Descargar Guifo
+          </button>
+        </div>
+      </div>
+        <button id="cancelarUploadgif" class="elementNone botonBarra botonCapturar botonCancelar">Cancelar</button>  
+    </div>
+    <div class="tituloCards">
+      <h3 class="espaciadoTituloCards">Mis guifos</h3>
+    </div>
+    <div id="contenedorGifsCreados" class="elementNone"></div>
+  </body>
+</html>

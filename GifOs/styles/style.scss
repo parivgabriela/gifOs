@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap");
+$colorDeFuente: #ffffff;
+
+$fuente: "Chakra Petch", sans-serif;
+$backgroundColorDay: #fff4fd;
+$backgroundColorDayNight: #110038;
+$fondoContainer: #b4b4b4;
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+body {
+  font-size: 16px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+//clases
+%rowClass{
+  display: flex;
+  flex-direction: row;
+}
+.acciones:hover {
+  display: none;
+}
+.top {
+  margin-left: -100px;
+  height: 23px;
+  width: 100vw;
+  box-shadow: 0 1px 0 0 $colorDeFuente;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0;
+  justify-content: center;
+  padding-top: 4px;
+}
+//reset botones
+button {
+  border: none;
+  outline: none;
+}
+header {
+  display: block;
+}
+.logo {
+  margin-bottom: 16px;
+  margin-right: -9px;
+  margin-top: 35px;
+}
+.botonBarraEspaciado {
+  margin-right: 16px;
+}
+.dimensionesBarra{
+  width: 134px;
+  height: 36px;
+}
+.botonMisGuifOs{
+  margin-left: 16px;
+}
+.dimensionesBarraSuperiorDegrade{
+  width: 1194px;
+  height: 24px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+.containerDropdown{
+  @extend %flex-colum;
+  width: 170px;
+}
+.elementoDropDownWidth{
+  width: 170px;
+  height: 102px;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+.botonesSup{
+  @extend %rowClass;
+  width: 100%;
+}
+.dimEspaciado{
+  position: relative;
+  width: 81px;
+  height: 34px;
+  bottom: 60px;
+  left: 10px;
+}
+.dimensionCardSugerencia{
+  width: 288px;
+  height: 313px;
+}
+.tituloBienvenida {
+  margin-left: 7px;
+}
+.buscarGif {
+  width: 1057px;
+  height: 48px;
+  padding: 13px;
+  margin: 12px 7px 12px 15px;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+}
+
+.botonesBarra {
+  margin-top: 44px;
+  display: flex;
+}
+
+.botonBuscar {
+  width: 102px;
+  height: 36px;
+  background: #e6e6e6;
+  color: $fondoContainer;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 $fondoContainer, inset 1px 1px 0 0 #ffffff;
+}
+
+.tituloBuscador {
+  color: white;
+  font-size: 14px;
+  @extend %espaciado-left;
+}
+
+.spaceTitulo {
+  top: 0;
+  margin-top: 0.19rem;
+}
+.closeIMG{
+  margin-right: 4px;
+}
+.tituloCards {
+  background: #fffafe;
+  border: 1px solid #e6bbe2;
+  box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+  margin-bottom: 19px;
+  height: 32px;
+  width: 1200px;
+}
+.espaciadoTituloCards{
+  padding: 7px;
+}
+%flex-colum {
+  display: flex;
+  flex-direction: column;
+}
+%widthBuscador {
+  width: 1200px;
+  height: 99px;
+  // margin-left: 3px;
+}
+%boxSugerencias {
+  width: 100%;
+  height: 10rem;
+}
+.sugerenciasDeBusqueda {
+  @extend %boxSugerencias;
+  padding: 1.03rem 8rem 1rem 0.94rem;
+  z-index: 1;
+}
+
+.sugerenciaEncontrada {
+  width: 66.06rem;
+  height: 2.25rem;
+  padding: 0.38rem 15rem 0.38rem 1rem;
+}
+.sugerenciaEncontrada:hover {
+  outline: 0.06rem dotted #110038;
+  outline-offset: -0.04rem;
+  border: 1px solid #110038;
+}
+.containerBuscador {
+  @extend %widthBuscador;
+  @extend %flex-colum;
+  @extend %border-light;
+}
+.interlineado {
+  margin-bottom: 0.69rem;
+}
+.cardEspaciado {
+  margin-right: 20px;
+}
+.cardEspaciadoTendencia {
+  margin-right: 10px;
+}
+header {
+  display: inline-block;
+}
+.containerCardsSugerencias {
+  @extend %rowClass;
+}
+.containerCardsFila {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+.containerCards {
+  margin-top: 36px;
+  width: 1194px;
+}
+.cabezal {
+  color: white;
+  font: $fuente;
+  font-size: 14px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.19rem;
+}
+%margin-cabezalTrend{
+  margin: 3px 4px 2px 4px;
+}
+.dimensionesCabezalTendencias{
+  @extend %margin-cabezalTrend;
+  width: 280px;
+}
+.dimensionRectangulo {
+  width: 286px;
+  height: 296px;
+}
+.font-small{
+  font-size: 14px;;
+}
+.fotoCardSugerencia {
+  width: 280px;
+  height: 280px;
+  position: relative;
+}
+.fotoCard {
+  width: 288px;
+  height: 298px;
+}
+.cardFotoDimension {
+  width: 294px;
+  height: 304px;
+  position: relative;
+}
+.cardFotoTrendNormal{
+  width: 288px;
+  height: 298px;
+  position: relative;
+}
+.fotoDimension{
+  margin: 4px;
+}
+
+.positionAbsolut{
+  position: absolute;
+  right: 4;
+  bottom: 0;
+  left: 4;
+  width: 99%;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+.fotoDimensionSugerencia {
+  width: 100%;
+  height: 100%;
+  margin: 0px 4px 4px 4px;
+}
+.contenedorCabezal {
+  display: none;
+}
+.contenedorCabezal :hover {
+  display: flex;
+}
+.estiloTituloSugerencias {
+  font-family: $fuente;
+  font-size: 14px;
+  color: $colorDeFuente;
+  letter-spacing: 0;
+}
+.botonPostEstructura{
+  height: 34px; 
+ font-size: 14px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.dimensionPost1{
+  width: 100px;
+}
+.dimensionPost2{
+  width: 154px;
+}
+.dimensionPost3{
+  width: 140px;
+}
+.espaciado-8{
+  margin-right: 8px;
+}
+.espaciado-top-12{
+  margin-top: 12px;
+}
+//upload gifOs
+
+.containerCrearGifPrimer {
+  display: flex;
+  margin: 30px 93px 28px 25px;
+}
+.logoWindow {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+.palabraNegrita {
+  font-weight: bold;
+}
+span.textoNegro {
+  font-weight: bold;
+  font: italic bold 14px $fuente;
+}
+.elementoCerrar{
+  position: relative;
+  right: 10px;
+}
+.containerGenerarVideo {
+  @extend %border-light;
+  margin-top: 88px;
+  margin-left: 18%;
+  margin-bottom: 180px;
+}
+%border-light{
+  background-color: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+.posicionContador{
+  position: relative;
+  bottom: -10px;
+  left: 9px;
+}
+.dimensionPrimerGeneradorVideo{
+width: 684px;
+height: 386px;
+position: relative;
+}
+.botonAbsolute{
+  position: absolute;
+}
+.margenBotonCancelar{
+  right: 14px;
+  bottom: 16px;
+}
+.botonListo{
+  right: 46px;
+  bottom: 44px;
+}
+.dimensionesTercerGeneradorVideo{
+  width: 700px;
+  height: 548px;
+  position: relative;
+}
+.dimensionesSegundoGeneradorVideo{
+  width: 700px;
+  height: 605px;
+  position: relative;
+}
+.dimensionesUltimoGeneradorVideo{
+  width: 721px;
+  height: 391px;
+  position: relative;
+}
+.interlinea {
+  margin-bottom: 10px;
+}
+.containerBotones {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  bottom: 25px;
+}
+.rightButonMargin {
+  margin-right: 16px;
+}
+.fontSizeMedium {
+  font-size: 16px;
+}
+.tituloCrearGif {
+  margin-top: 0.4rem;
+  margin-left: 0.44rem;
+}
+.playGifSmall {
+  width: 0;
+  height: 0;
+}
+.playGif {
+  width: 678px;
+  height: 514px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.containerBotonCapturar {
+  width: 180px;
+  height: 36px;
+  @extend %rowClass;
+  margin-left: 75%;
+  position: relative;
+  right: 16px;
+}
+.espaciado-bottom{
+  bottom: 25px;
+}
+.containerCamara {
+  width: 36px;
+  display: flex;
+  justify-content: center;
+}
+.botonCapturar {
+  width: 144px;
+  height: 36px;
+}
+.elementNone {
+  display: none;
+}
+.marginContador {
+  margin-left: 21px;
+}
+
+.rows {
+ @extend %rowClass;
+  align-items: center;
+}
+.load {
+  width: 12px;
+  height: 20px;
+  padding: 2px;
+}
+
+.espaciadoBarra {
+  margin-right: 2px;
+}
+.espaciadoRi
+.containerBarraProgress {
+  width: 324px;
+  height: 24px;
+  background-color: #b4b4b4;
+}
+
+span.tachado {
+  text-decoration: line-through;
+}
+%espaciado-left{
+  margin-left: 3px;
+}
+.lightFontSmall {
+  color: $backgroundColorDayNight;
+  opacity: 0.64;
+  font-size: 12px;
+}
+.tituloSugerencias{
+  margin-top: 3px;
+  @extend %espaciado-left;
+}
+
+.dimensionesProcessGif {
+  width: 97%;
+  height: 440px;
+  background-color: $colorDeFuente;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+  @extend %flex-colum;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+.tituloEnProceso {
+  margin-bottom: 5%;
+}
+
+.displayGifCreados {
+  width: 1200px;
+}
+.backgroundProgressBarDay {
+  background-color: #f7c9f3;
+}
+.fondoBarraEnCurso {
+  background-color: #999999;
+}
+.columns{
+  @extend %flex-colum;
+}
+.borderMedium{
+  background-color: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.marginTitle{
+  margin-bottom: 16px;
+}
+.marginBotton{
+  margin-bottom: 14px;
+}
+.dimesionesGifCreado{
+  width: 50%;
+  height: 191px;
+}
+.contenedorTextoYbotones{
+  width: 256px;
+height: 271;
+}
+.marginLeftIMG{
+  margin-left: 24px;
+}
+.marginTopImg{
+  margin-top: 27px;
+}
+.margin-bottom-away{
+ margin-bottom: 111px;
+}
+.marginleftButton{
+  margin-left: 74%;
+}
+.botonCopiarEnlaceGif{
+  width: 256px;
+  height: 36px;
+}
+
+.containerRelative{
+  position: relative;
+width: 200px;
+height: 200px;
+}
+.espaciadoRenglon{
+  margin-bottom: 11px;
+  margin-top: 10px;
+}

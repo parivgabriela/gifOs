@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://kit.fontawesome.com/6fb1aa5747.js"></script>
+    <link id="pagestyle" href="" rel="stylesheet" type="text/css" />
+    <script src="./JS/gif.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico">
+    <title>GuifOs</title>
+  </head>
+  <body onload="getTrending();putSuggest();OcultarYmostrar();onLoadIndex()">
+    <header class="top degrade">
+      <h4 class="tituloBienvenida">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </h4>
+    </header>
+    <nav>
+      <img id="logoPagina" class="logo" src="./assets/gifOF_logo.png" alt="logo  de Gif os" />
+      <div class="botonesBarra" >
+        <button type="submit" onclick="window.location.href='uploadVideoGif.html'" class="botonBarra botonCapturar botonBarraEspaciado">Crear Guifos</button>
+        <div class="containerDropdown">
+          <div class="botonesSup">
+            <button class="botonBarra dimensionesBarra">Elegir tema</button>
+            <button id="idBotonAExpandir" class="botonExpandible">
+              <i class="fa fa-caret-down"></i>
+            </button>
+          </div>
+            <div id="elementoContainerDropdown" class="elementNone">
+              <div class="elementoDropDown interlinea">
+              <a  onclick="setDay();">Sailor Day</a>
+              </div>
+              <div class="elementoDropDown">
+                <a  onclick="setNight();">Sailor Night</a>
+              </div>
+            </div>
+          </div>
+        
+        <p class="botonMisGuifOs"><a href="./uploadVideoGif.html">Mis Guifos</a></p>
+      </div>
+    </nav>
+
+    <div class="containerBuscador">
+      <div class="degrade dimensionesBarraSuperiorDegrade">
+        <h4 class="tituloBuscador palabraNegrita">Buscar</h4>
+      </div>
+      <div class="buscador">
+        <input
+          class="buscarGif"
+          for="text"
+          id="numb"
+          placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+          onkeyup="onChange()"
+        />
+        <button id="botonBusqueda" class="botonBuscar estiloBotonBuscar" onclick="searchElement()">
+          <img src="./assets/lupa.svg" alt="Buscador" /> Buscar
+        </button>
+      </div>
+      <div id="sugereciasXBusqueda" class="elementNone">
+        <div class="opcion1 sugerenciaEncontrada interlineado" onclick="searchElement()">Resultado de búsqueda sugerido</div>
+        <div class="opcion2 sugerenciaEncontrada interlineado" onclick="searchElement()">Un resultado similar de búsqueda</div>
+        <div class="opcion3 sugerenciaEncontrada interlineado" onclick="searchElement()">Y otro más</div>
+      </div>
+    </div>
+    <div id="contenedorBotonesPostBusqueda" class="elementNone">
+      <div id="botonPostBusqueda1" class="botonPost dimensionPost1 botonPostEstructura espaciado-8">#Un ejemplo</div>
+      <div id="botonPostBusqueda2" class="botonPost dimensionPost2 botonPostEstructura espaciado-8">#Un ejemplomáslargo</div>
+      <div id="botonPostBusqueda3" class="botonPost dimensionPost3 botonPostEstructura espaciado-8">#tagsrelacionados</div>
+    </div>
+    <div id="containerSugerencias" class="containerCards">
+
+      <div class="tituloCards" >
+        <h4 class="espaciadoTituloCards font-small"> Hoy te sugerimos:</h4>
+      </div>
+      <div class="containerCardsSugerencias">
+
+        <div class="containerCard cardEspaciado dimensionCardSugerencia">
+          <div class="cabezal degrade dimensionesCabezalTendencias">
+            <h4 class="tituloSugerencias palabraNegrita">#RandomGif #topic #trend</h4>
+            <img class="closeIMG" src="./assets/close.svg" alt="cerrar" />
+          </div>
+          <div class="fotoCardSugerencia">
+            <img class="fotoSugerencias1 fotoDimensionSugerencia"
+              src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif"></img>
+          <button class="sugerenciaVerMas dimEspaciado">Ver más…</button>
+          </div>
+        </div>
+        <div class="containerCard cardEspaciado dimensionCardSugerencia">
+          <div class="cabezal degrade dimensionesCabezalTendencias">
+            <h4 class="tituloSugerencias palabraNegrita">#RandomGif #topic #trend</h4>
+            <img class="closeIMG" src="./assets/close.svg" alt="cerrar" />
+          </div>
+          <div class="fotoCardSugerencia">
+            <img
+              class="fotoSugerencias2 fotoDimensionSugerencia"
+              src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" 
+            />
+            <button class="sugerenciaVerMas dimEspaciado">Ver más…</button>
+          </div>
+        </div>
+        <div class="containerCard cardEspaciado dimensionCardSugerencia">
+          <div class="cabezal degrade dimensionesCabezalTendencias">
+            <h4 class="tituloSugerencias palabraNegrita">#RandomGif #topic #trend</h4>
+            <img class="closeIMG" src="./assets/close.svg" alt="cerrar" />
+          </div>
+          <div class="fotoCardSugerencia">
+            <img
+              class="fotoSugerencias3 fotoDimensionSugerencia"
+              src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" 
+            />
+            <button class="sugerenciaVerMas dimEspaciado">Ver más…</button>
+          </div>
+        </div>
+        <div class="containerCard dimensionCardSugerencia">
+          <div class="cabezal degrade dimensionesCabezalTendencias">
+            <h4 class="tituloSugerencias palabraNegrita">#RandomGif #topic #trend</h4>
+            <img class="closeIMG" src="./assets/close.svg" alt="cerrar" />
+          </div>
+          <div class="fotoCardSugerencia">
+            <img
+              class="fotoSugerencias4 fotoDimensionSugerencia"
+              src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif"
+            />
+            <button class="sugerenciaVerMas dimEspaciado">Ver más…</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="containerCards">
+      <div id="titloTendencias" class="tituloCards">Tendencias:</div>
+      <div class="containerCardsFila">
+       
+    <div id="card1" class="containerCard cardEspaciadoTendencia cardFotoDimension espaciadoRenglon" >
+      <img class="fotoTrend1 fotoDimension"
+        src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+        height="298px" />
+        <div id="tituloCabezal1" class="cabezal degrade positionAbsolut">
+          <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+        </div> 
+  </div>
+  <div id="card2" class="cardEspaciadoTendencia cardFotoTrendNormal espaciadoRenglon" >
+    <img class="fotoTrend2 fotoDimension"
+      src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+      height="298px" />
+      <div id="tituloCabezal2" class="elementNone">
+        <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+      </div> 
+</div>
+<div id="card3" class="cardEspaciadoTendencia cardFotoTrendNormal espaciadoRenglon" >
+  <img class="fotoTrend3 fotoDimension"
+    src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+    height="298px" />
+    <div id="tituloCabezal3" class="elementNone">
+      <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+    </div> 
+</div>
+<div id="card4" class="containerCard cardFotoDimension espaciadoRenglon" >
+<img class="fotoTrend4 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal4" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card5" class="cardEspaciadoTendencia cardFotoTrendNormal espaciadoRenglon" >
+<img class="fotoTrend5 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal5" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card6" class="cardEspaciadoTendencia cardFotoTrendNormal espaciadoRenglon" >
+<img class="fotoTrend6 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal6" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card7" class="cardEspaciadoTendencia cardFotoTrendNormal espaciadoRenglon" >
+<img class="fotoTrend7 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal7" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card8" class="containerCard cardFotoDimension espaciadoRenglon" >
+<img class="fotoTrend8 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal8" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card9" class="rightButonMargin cardFotoTrendNormal espaciadoRenglon" >
+<img class="fotoTrend9 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal9" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card10" class="rightButonMargin cardFotoTrendNormal espaciadoRenglon" >
+<img class="fotoTrend10 fotoDimension"
+  src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+  height="298px" />
+  <div id="tituloCabezal10" class="elementNone">
+    <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+  </div> 
+</div>
+<div id="card11" class="rightButonMargin cardFotoTrendNormal espaciadoRenglon" >
+  <img class="fotoTrend11 fotoDimension"
+    src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+    height="298px" />
+    <div id="tituloCabezal11" class="elementNone">
+      <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+    </div> 
+  </div>
+  <div id="card12" class="containerCard cardFotoDimension espaciadoRenglon" >
+    <img class="fotoTrend12 fotoDimension"
+      src="https://media.giphy.com/media/3oriOiizS4Pmofj46A/giphy.gif" width="288px"
+      height="298px" />
+      <div id="tituloCabezal12" class="elementNone">
+        <h4 class="tituloSugerencia1">#GifCrazy #topic #trend</h4>
+      </div> 
+    </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+@import "./style.scss";
+$colorPrimarioSailorDay: #f7c9f3;
+$colorSecundarioSailorDay: #4180f6;
+$colorPrimarioSailorNight: #ee3efe;
+$colorSecundarioSailorNight: #2e32fb;
+$colorDeFuente: #110038;
+$backgroundDayGray:#e6e6e6;
+$fuente: "Chakra Petch", sans-serif;
+$backgroundColorDay: #fff4fd;
+$backgroundColorDayNight: #110038;
+
+body {
+  margin-left: 100px;
+  background-color: $backgroundColorDay;
+  font-family: $fuente;
+  font-size: 16px;
+}
+
+.degrade {
+  background-image: linear-gradient(
+    270deg,
+    $colorPrimarioSailorDay 0%,
+    $colorSecundarioSailorDay 100%
+  );
+}
+
+.sugerenciaEncontrada {
+  background-color: #f0f0f0;
+  @extend %borderGray;
+}
+.sugerenciaEncontrada:hover {
+  background-color: #dbdbdb;
+  @extend %borderGray;
+}
+%borderGray{
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+}
+%border_videoGif{
+  background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.borderVideoGif{
+  @extend %border_videoGif;
+}
+.botonBarra {
+  background-color: $colorPrimarioSailorDay;
+  color: $colorDeFuente;
+  background-color: #f7c9f3;
+  @extend %borderPinkLight;
+}
+%borderPinkLight{
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+.dropdown-content {
+  background-color: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.elementoDropDown{
+  width: 150px;
+  height: 36px;
+  padding-top: 7px;
+  padding-left: 16px;
+  background: #F0F0F0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.buscador {
+  height: 6.19rem;
+}
+.estiloBotonBuscar:hover {
+  background: #f7c9f3;
+  @extend %borderPinkLight;
+
+}
+
+.containerCard{
+  @extend %border-light
+}
+.containerCardTendencia {
+  width: 294px;
+  height: 304px;
+}
+
+%border-light{
+  background-color: #e6e6e6;
+  box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+}
+.borderLight{
+  @extend %border-light;
+}
+.botonExpandible {
+  background-color: $colorPrimarioSailorDay;
+  color: $colorDeFuente;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  border-left: 1px solid navy;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+}
+.sugerenciaVerMas {
+  background-color: $colorSecundarioSailorDay;
+  border: 1px solid #4c2f99;
+  box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+  color: white;
+ 
+}
+.botonPost{
+  background-color: $colorSecundarioSailorDay;
+border: 1px solid #4C2F99;
+box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+color: white;
+}
+
+
+//uploadGif.html
+
+.botonCancelar {
+  background-color: #fff4fd;
+}
+.backgroundContainer {
+  background-color: $backgroundDayGray;
+}
+.backgrundBotonCapturar {
+  background: #f7c9f3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+.borderRectangle {
+  width: 124px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+}
+
+//borrar
+.espaciado{
+  padding: 30px;
+}  
+//demo
+.punteada{
+  background-color: white;
+  background: #f7c9f3;
+  border:1px dotted ;
+  width: 127px;
+  height: 32px;
+
+}
+.textoNormalBoton:hover{
+  display: none;
+}
