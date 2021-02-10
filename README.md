@@ -4,3 +4,7 @@ Seundo proyecto de acamica
 
 <b>Requisitos</b>
   <p> Para realizar el gif se debe tener una camara</p>
+
+Link del servidor 
+======================================
+https://guifod.000webhostapp.com/
